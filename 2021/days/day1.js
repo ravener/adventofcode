@@ -1,15 +1,9 @@
 /* Day 1: Sonar Sweep */
-const { read } = require("../utils/input.js");
-const input = read(1).map(line => parseInt(line));
+const { readNumbers } = require("../utils/input.js");
+const input = readNumbers(1);
 
 let increases = 0;
 let windows = 0;
-
-/* input.reduce((previous, measurement) => {
-  if (!previous) return measurement;
-  if (measurement > previous) increases++;
-  return measurement;
-}, 0);*/
 
 for (let i = 0; i < input.length; i++) {
   if (input[i] > input[i - 1]) increases++;
